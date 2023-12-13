@@ -1,0 +1,59 @@
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#map{
+	width: 70vw;
+	height: 70vh;
+	margin: 2rem auto;
+
+}
+
+.output-area{
+	width: 90vw;
+	margin: 1rem auto;
+	border: 1px solid black;
+	border-radius: 1rem;
+	padding: 0 1rem;
+}
+.selection-bar{
+	width: 100%;
+	text-align: center;
+	padding: 0.5rem;
+
+}
+
+
+
+
+.result-container{
+	align-items: center;
+	width: 100%;
+	min-height: 100px;
+	
+	
+}
+.result-container td{
+	padding: 0.5rem;
+}
+
+
+.control-container{
+	margin: 0 auto;
+	width: fit-content;
+}
+.control-container button{
+	margin: 0.5rem 1rem;
+}
+
+
+
+footer{
+	text-align: center;
+	padding:0.7rem ;
+	border-top: 1px solid lightslategray;
+}
+

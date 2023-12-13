@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>R.P.Raiyani</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+	integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+	crossorigin=""/>
+	<link rel="stylesheet" href="css/index.css">
+  </head>
+  <body class="bg-body-secondary">
+
+	
+
+	<nav class="navbar bg-dark">
+		<div class="container-fluid">
+		  <a class="navbar-brand text-white">Navbar</a>
+		  <form class="d-flex" role="search">
+			<input class="form-control me-2" id="location-search" type="search" placeholder="Search" aria-label="Search">
+			<button class="btn btn-outline-secondary" type="submit">Search</button>
+		  </form>
+		</div>
+	</nav>
+
+	<div id="map"></div>
+	<div class="control-container">
+		<button class="btn btn-light" onclick="showAllLocation()">show all locations</button>
+		<button class="btn btn-light" onclick="showAllHospitals()">show all hospitals</button>
+		<button class="btn btn-light" onclick="showAllPumps()">show all pumps</button>
+		<button class="btn btn-light" onclick="getCurrentLocation()">curent location</button>
+	</div>
+
+
+	<div id="fackdata"></div>
+
+
+
+	<div class="output-area">
+		<div class="selection-bar">
+			<button type="button" class="btn btn-light" onclick="showData(result_container,res)">Locations</button>
+			<button type="button" class="btn btn-light" onclick="showHospitals(result_container,res_hospitals)">Hospitals</button>
+			<button type="button" class="btn btn-light" onclick="showHelpLine(result_container,res_helpline)">Help line number</button>
+		</div>
+		<hr style="width:80%; margin: 0.4rem auto;">
+		<table class="result-container">
+
+		</table>
+	</div>
+
+
+
+	<form action="" class="fillter-form">
+		<select class="form-select" id="country-opt" aria-label="Default select example">
+			<option value="">country</option>
+		  </select>
+
+		  <select class="form-select" id="state-opt" aria-label="Default select example">
+			<option value="">state</option>
+		  </select>
+
+		  <select class="form-select" id="city-opt" aria-label="Default select example">
+			<option value="">city</option>
+		  </select>
+		  <button type="button" class="btn btn-light" onclick="filterData()">search</button>
+	</form>
+
+
+	<footer>
+		<span>Top Growth</span>
+	</footer>
+
+	
+	
+	
+
+	
+
+
+
+
+
+	
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+	<!-- <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+	integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+	crossorigin=""> -->
+	</script>
+	<script async src="js/map.js"></script>
+	
+	<script
+	async
+	defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRIPOlaZkj8nXd4oOiJmHEYU2uzPifvv0&callback=myMap"
+  >
+  
+</script>
+
+</script>
+  </body>
+</html>
+

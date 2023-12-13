@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #map {
+        width: 100vw;
+        height: 80vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      function myMap() {
+        var location = { lat: 33.2334, lng: 23.234 };
+
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 5,
+          center: location,
+          panControl: true,
+          zoomControl: true,
+          mapTypeControl: true,
+          scaleControl: true,
+          streetViewControl: true,
+          overviewMapControl: true,
+          rotateControl: true,
+          mapTypeId: google.maps.MapTypeId.HYBRID,
+        });
+        var marker = new google.maps.Marker({
+          position: location,
+          map: map,
+        });
+      }
+      var marker = new google.maps.Marker({ position: myCenter });
+
+      marker.setMap(map);
+    </script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRIPOlaZkj8nXd4oOiJmHEYU2uzPifvv0&callback=myMap"
+    ></script>
+  </body>
+</html>
+
+// var map = document.getElementById("map")
+// var map = L.map(map, {
+//     center: [51.505, 34.09],
+//     zoom: 13
+// });
+
+// L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+//     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+// }).addTo(map);
+
+// L.marker([51.5, -0.09]).addTo(map)
+//     .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+//     .openPopup();
